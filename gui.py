@@ -44,7 +44,6 @@ class MainScreen(Screen):
         anim = Animation(pos_hint={"center_x": 0.5}, duration=0.5)
         anim.start(self.ids["res_card"])
         for itm in nodes:
-            print(itm)
             start = itm[0].rfind("/")
             end = itm[0].find(".pdf")
             name = itm[0][start+1:end]
