@@ -21,4 +21,5 @@ A small program with front-end to match CVs against keywords.
   # !OBS!
   
  # PROGRAM IS ONLY TESTED ON LINUX
+ # Because of required package "pdftotext" this does not currently work on Windows
  
