@@ -1,4 +1,4 @@
-#!/home/anon/PycharmProjects/prepp-consid-hr/venv/bin/python
+#!/home/anon/PycharmProjects/ApplicationMatcher/venv/bin/python
 
 # Author:
 # Contact: grubert@users.sf.net

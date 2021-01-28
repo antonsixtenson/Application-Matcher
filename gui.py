@@ -47,16 +47,17 @@ class MainScreen(Screen):
             start = itm[0].rfind("/")
             end = itm[0].find(".pdf")
             name = itm[0][start+1:end]
+            print(itm[0])
             self.ids.res_lst.add_widget(
-                ThreeLineListItem(id=itm[0],
-                                  text=name,
-                                  secondary_text=f'Hard Keys match: {int(itm[1])}% Soft Keys match: {int(itm[2])}%',
-                                  tertiary_text=f'Distance to Ideal Candidate: {int(itm[3])} lu', on_release=self.opn_file)
+                ThreeLineListItem(text = itm[0],
+                                  secondary_text = f'Hard Keys match: {int(itm[1])}% Soft Keys match: {int(itm[2])}%',
+                                  tertiary_text = f'Distance to Ideal Candidate: {int(itm[3])} lu',
+                                  on_release = self.opn_file)
             )
 
     def opn_file(self, instance):
-        start = instance.id.find("/")
-        ref_id = instance.id[start:len(instance.id)-1]
+        start = instance.text.find("/")
+        ref_id = instance.text[start:len(instance.text)-1]
         webbrowser.open_new(ref_id)
 
     def go_back(self):
